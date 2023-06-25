@@ -27,3 +27,5 @@ button.addEventListener('click', function() {
  // Function parameters
     console.log('button clicked');
 });
+
+// testing 2
