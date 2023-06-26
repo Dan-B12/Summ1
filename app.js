@@ -1,4 +1,10 @@
-$.ajax({
+function goToScore()
+    var city = document.getElementById('city-input').value;
+    sessionStorage.setItem('city', city);
+    window.location.href = 'AQIScore.html';
+
+
+/* $.ajax({
     url: 'https://api.openaq.org/v2/locations',
     method: 'GET',
     headers: {
@@ -27,5 +33,5 @@ button.addEventListener('click', function() {
  // Function parameters
     console.log('button clicked');
 });
-
+*/
 // testing 2
