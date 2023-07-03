@@ -2,10 +2,10 @@
 
 ## Table of Contents
 1. [About](#about)
-2. [Deployed App](#Deployed App)
+2. [Deployed App](#deployed-app)
 2. [Features](#features)
 3. [Technologies Used](#technologies-used)
-5. [Project Management](#Project Management)
+5. [Project Management](#project-management)
 6. [Testing](#testing)
 7. [Contributing](#contributing)
 8. [Evaluation](#evaluation)
@@ -24,6 +24,7 @@ Continuous Deployment (CD): The practice of automatically deploying code to prod
 <a name="Deployed App"></a>
 ## Deployed App
 You can find my app deployed here under on my Github Page
+
 <a href="https://dan-b12.github.io/Summ1/" target="_blank">AQI App</a>
 
 <a name="features"></a>
