@@ -5,11 +5,12 @@ function goToScore(city) {
   window.location.href = 'AQIScore.html';
 }
 
-async function getCities() {
-  const response = await fetch('https://api.openaq.org/v2/cities');
-  const data = await response.json();
-  return data;
-}
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector('button').addEventListener('click', function() {
+    var city = document.getElementById('city-input').value;
+    goToScore(city);
+  });
+});
 
 async function getCityData(city, apiKey) {
   try {
@@ -21,14 +22,15 @@ async function getCityData(city, apiKey) {
       sort: 'asc',
       order_by: 'city'
     }, {
-      headers: { 'Authorization': 'Bearer ${apiKey' 
+      headers: { 'Authorization': `Bearer ${apiKey}` }
     });
-    
+
     return response.data;
   } catch (err) {
     console.error(err);
   }
 }
+
 
 module.exports = { goToScore, getCities };
 /* $.ajax({
