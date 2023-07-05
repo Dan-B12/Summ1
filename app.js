@@ -1,9 +1,15 @@
 const apiKey = 'a2e63e109ef5e39ec0caed175e3283bfae3633dc72c982857186997a3cbe03a4';
 
+document.querySelector('button').addEventListener('click', function() {
+  var city = document.getElementById('city-input').value;
+  getCityData(city);
+});
+
 function getCityData(city) {
   const encodedCity = encodeURIComponent(city);
   fetch(`https://api.openaq.org/v2/latest?city=${encodedCity}`, {
     headers: {
+      "Accept" : "application/json",
       'Authorization' : 'Bearer ${apiKey}'
     }
   })
@@ -32,8 +38,3 @@ function getCityData(city) {
       })
       .catch(err => console.error(err));
 }
-
-document.querySelector('button').addEventListener('click', function() {
-  var city = document.getElementById('city-input').value;
-  getCityData(city);
-});
