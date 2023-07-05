@@ -1,8 +1,8 @@
-const city = encodeURIComponent(cityName);
-const apiKey = 'a2e63e109ef5e39ec0caed175e3283bfae3633dc72c982857186997a3cbe03a4'
+const apiKey = 'a2e63e109ef5e39ec0caed175e3283bfae3633dc72c982857186997a3cbe03a4';
 
 function getCityData(city) {
-  fetch(`https://api.openaq.org/v2/latest?city=${city}`, {
+  const encodedCity = encodeURIComponent(city);
+  fetch(`https://api.openaq.org/v2/latest?city=${encodedCity}`, {
     headers: {
       'Authorization' : 'Bearer ${apiKey}'
     }
