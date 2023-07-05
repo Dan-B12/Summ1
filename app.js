@@ -1,13 +1,7 @@
 const city = 'city-input'
 const apiKey = 'a2e63e109ef5e39ec0caed175e3283bfae3633dc72c982857186997a3cbe03a4';
 
-const options = {
-  method: 'GET',
-  headers: {
-    "Accept" : "application/json",
-    'Authorization' : 'Bearer ${apiKey}'
-  }
-};
+const options = { method: 'GET', headers: { accept: "application/json"}};
 
 fetch(`https://api.openaq.org/v2/measurements?city=$(city)`, options) 
   .then(response => response.json())
