@@ -9,7 +9,7 @@ const options = {
     }
   };
 
-  fetch(`https://api.openaq.org/v2/measurements?city=$(city)`, options) 
+  fetch(`https://api.openaq.org/v2/measurements?city=(city)`, options) 
     .then(response => response.json())
     .then(data => {
       console.log(data);
