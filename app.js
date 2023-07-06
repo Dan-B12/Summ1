@@ -20,7 +20,7 @@ fetch(`https://api.openaq.org/v2/measurements?city=$(city)`, options)
 
 document.addEventListener("DOMContentLoaded", function() {
   var displayDiv = document.getElementById('city-data');
-  displayDiv.innerHTML = '';
+  displayDiv.innerHTML = 'city-data';
   var cityHeader = document.createElement('h2');
   cityHeader.textContent = city;
   displayDiv.appendChild(cityHeader);
