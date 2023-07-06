@@ -27,7 +27,7 @@ const options = {
   .catch(err => console.error(err));
 }
 document.addEventListener("DOMContentLoaded", function() {
-  var city = sessionStorage.getItem('city-input');
+  var city = sessionStorage.getItem('city');
   var displayDiv = document.getElementById('city-data');
 
   if (displayDiv) { // Checking if the displayDiv does not return null before attempting to use the below statements
