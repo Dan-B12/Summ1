@@ -12,6 +12,7 @@ const options = {
   fetch(`https://api.openaq.org/v2/measurements?city=$(city)`, options) 
     .then(response => response.json())
     .then(data => {
+      console.log(data);
       // Iterate over the results from the API
       data.results.forEach(result => {
         // For each result, create a new p element and set its text to the parameter and value
