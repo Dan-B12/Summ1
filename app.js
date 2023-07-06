@@ -2,7 +2,7 @@ const city = 'city-input'
 const apiKey = 'a2e63e109ef5e39ec0caed175e3283bfae3633dc72c982857186997a3cbe03a4';
 
 function getCityData(city, apiKey) {
-const encodedCity = encodedURIComponent(city);
+const encodedCity = encodeURIComponent(city);
 const options = { 
   method: 'GET', 
   headers: { 
@@ -27,7 +27,7 @@ const options = {
   .catch(err => console.error(err));
 }
 document.addEventListener("DOMContentLoaded", function() {
-  var city = sessionStorage.getItem('city');
+  var city = sessionStorage.getItem('city-input');
   var displayDiv = document.getElementById('city-data');
 
   if (displayDiv) { // Checking if the displayDiv does not return null before attempting to use the below statements
