@@ -28,13 +28,22 @@ const options = {
 document.addEventListener("DOMContentLoaded", function() {
   var city = sessionStorage.getItem('city');
   var displayDiv = document.getElementById('city-data');
-  var cityHeader = document.createElement('h2');
-  cityHeader.textContent = city;
-  displayDiv.appendChild(cityHeader);
 
-  document.querySelector('button').addEventListener('click', function() {
-    var city = document.getElementById('city-input').value;
+  if (displayDiv) { // Checking if the displayDiv does not return null before attempting to use the below statements
+    var cityHeader = document.createElement('h2');
+    cityHeader.textContent = city;
+    displayDiv.appendChild(cityHeader);
+
     getCityData(city);
-    window.location.href = 'aqiScore.html';
-  });
+  }
+
+  var button = document.querySelector('button');
+
+  if (button) { // Checking if the button does not return null before adding the event listener to it
+    document.querySelector('button').addEventListener('click', function() {
+      var city = document.getElementById('city-input').value;
+      sessionStorage.setItem('city', city);
+      window.location.href = 'aqiScore.html';
+    });
+  }
 });
