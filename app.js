@@ -2,6 +2,7 @@ const city = 'city-input'
 const apiKey = 'a2e63e109ef5e39ec0caed175e3283bfae3633dc72c982857186997a3cbe03a4';
 
 function getCityData(city, apiKey) {
+const encodedCity = encodedURIComponent(city);
 const options = { 
   method: 'GET', 
   headers: { 
@@ -9,7 +10,7 @@ const options = {
     }
   };
 
-  fetch(`https://api.openaq.org/v2/measurements?city=(city)`, options) 
+  fetch(`https://api.openaq.org/v2/measurements?city=${encodedCity}`, options) 
     .then(response => response.json())
     .then(data => {
       console.log(data);
