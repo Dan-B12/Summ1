@@ -11,20 +11,20 @@ const options = {
   };
 
   fetch(`https://api.openaq.org/v2/measurements?city=${encodedCity}&sort=desc&limit=1`, options) 
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-      if (data && data.results && data.results.length > 0) {
-        data.results.forEach(result => {
-          console.log(result);
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    if (data && data.results && data.results.length > 0) {
+      data.results.forEach(result => {
+        console.log(result);
         if (result) {
-            var para = document.createElement('p');
-            para.textContent = `${result.parameter}: ${result.value} ${result.unit}`;
-            displayDiv.appendChild(para);
+          var para = document.createElement('p');
+          para.textContent = `${result.parameter}: ${result.value} ${result.unit}`;
+          displayDiv.appendChild(para);
         }
       });
     }
-  })  
+  })
   .catch(err => console.error(err));
 
 document.addEventListener("DOMContentLoaded", function() {
