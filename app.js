@@ -1,5 +1,4 @@
 const city = 'city-input'
-const apiKey = 'a2e63e109ef5e39ec0caed175e3283bfae3633dc72c982857186997a3cbe03a4';
 
 function getCityData(city, apiKey) {
 const encodedCity = encodeURIComponent(city);
@@ -26,6 +25,7 @@ const options = {
     }
   })
   .catch(err => console.error(err));
+}
 
 document.addEventListener("DOMContentLoaded", function() {
   var city = sessionStorage.getItem('city');
@@ -48,5 +48,4 @@ document.addEventListener("DOMContentLoaded", function() {
       window.location.href = 'aqiScore.html';
     });
   }
-})
-};
+});
