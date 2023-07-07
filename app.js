@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     cityHeader.textContent = city;
     displayDiv.appendChild(cityHeader);
 
-    getCityData(city);
+    getCityData(city, displayDiv);
   }
 
   var button = document.querySelector('button');
