@@ -13,18 +13,20 @@ const options = {
   fetch(`https://api.openaq.org/v2/measurements?city=${encodedCity}&sort=desc&limit=1`, options) 
     .then(response => response.json())
     .then(data => {
-      // Iterate over the results from the API
-      data.results.forEach(result => {
-        // For each result, create a new p element and set its text to the parameter and value
-        result.measurements.forEach(measurement => {
+      console.log(data);
+      if (data && data.results && data.results.length > 0) {
+        data.results.forEach(result => {
+          console.log(result);
+        if (result) {
             var para = document.createElement('p');
-            para.textContent = `${measurement.parameter}: ${measurement.value} ${measurement.unit}`;
+            para.textContent = `${result.parameter}: ${result.value} ${result.unit}`;
             displayDiv.appendChild(para);
-        });
-    });
-  })
+        }
+      });
+    }
+  })  
   .catch(err => console.error(err));
-}
+
 document.addEventListener("DOMContentLoaded", function() {
   var city = sessionStorage.getItem('city');
   var displayDiv = document.getElementById('city-data');
