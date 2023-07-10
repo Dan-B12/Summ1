@@ -6,12 +6,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="styles.css">
         <title>Air Quality Score</title>
-        <header id="page-name">Air Quality Score for:</header>
+        <header id="page-name">Air Quality Score</header>
     </head>
     <body>
-        <h1 id ="city-loading"></h1>
-        <div id="city-data"></div>
-        </div>
+        <div class="container">
+            <div>
+              <h2>Selected City</h2>
+              <p id="city-selection"></p>
+            </div>
+            <div>
+              <h2>AQI Score</h2>
+              <p id="aqi-data"></p>
+            </div>
+          </div>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const urlParams = new URLSearchParams(window.location.search);
+              const selectedCity = urlParams.get('selectedCity');
+              const aqi = urlParams.get('aqi');
+        
+              // Update the selected city and AQI score elements
+              const citySelection = document.getElementById('city-selection');
+              const aqiData = document.getElementById('aqi-data');
+              citySelection.textContent = selectedCity;
+              aqiData.textContent = aqi;
+
+              if (aqi <= 50) {
+                aqiData.classList.add('aqi-good');
+            } else if (aqi <= 100) {
+                aqiData.classList.add('aqi-moderate');
+            } else if (aqi <= 150) {
+                aqiData.classList.add('aqi-unhealthy');
+            } else if (aqi <= 200) {
+                aqiData.classList.add('aqi-very-unhealthy');
+            } else {
+                aqiData.classList.add('aqi-hazardous');
+            }
+            });
+          </script>
         <script src="app.js"></script>
     </body>
 </html>
