@@ -67,6 +67,21 @@ If you'd like to contribute to my project, please follow these steps:
 
 <a name="evaluation"></a>
 ## Evaluation
-The project has been evaluated based on tests performed on the code I've written. 
 
-#Testing new change to config between vscode and branches
+Overall, I am extremely happy with the final result of my application, it fits the intended purpose of allowing users to search for the Air Quality Score for their selected city and provides a user-friendly front-end to search from. 
+
+The web app allows users to search for a country, select the state in which the city is located, then select the city to retrieve the AQI score for this city. The returned results allow for easy interpretation of the Air Quality in a city, and are colour coded to represent the quality of the air, in line with other online sources. I designed the web pages for the app with user experience in mind, making elements on the page bold and clear with appealing and contrasting colour schemes that are easy to comprehend. 
+
+I also considered many design principles during the development, ensuring the creation of a user-friendly and efficient web application. 
+
+For starters, I utilized the principle of modularity in the development of my app, by creating each feature as a separate, independent module. An example is the multiple fetch functions created, which were added sequentially during development. This design enabled easier debugging and testing and allowed me to make code changes to one module without affecting others. 
+
+Following this, the DRY (Don't Repeat Yourself) principle was used, ensuring that all classes and references in my code had an unambiguous representation. Allowing me to easily reference parameters and values when writing the CSS. 
+
+Finally, I implemented responsive design principles in my HTML and CSS to make the application accessible across all devices, which I confirmed when testing on mobile devices and other browsers. This improves the user experience and makes the application more flexible.
+
+In evaluating my approach, it's clear that the principles used made great contributions towards developing a robust and effective application. The use of modularity helped me to keep the codebase organized and manageable and understand my code to add further features. 
+
+Although there were many strengths to my design, some improvements could be made to build on the user experience and functionality of the project. For example, I could implement some changes to aid site optimization and user experience if I were to share the website publicly. I could also make some changes to the complexity of my JavaScript code to ensure contributors can easily understand how the app functions. 
+
+An feature improvement I would aim to implement in future would be a gauge chart to the results page, that moves depending on the AQI score for the city, this was in the initial plans for the project. Unfortunately, this was too complex a feature to implement within the timescale of the project. 
