@@ -9,8 +9,19 @@
     <body>
         <div class="container">
  		<h1>Air Quality Index</h1>
-        <input type="text" id="city-input" placeholder="Enter a city">
-        <button>Check Air Quality</button>
+         <!-- Country input -->
+         <input id="country-input" type="text" placeholder="Enter a country"></input>
+         <button id="country-submit">Submit</button>
+         <!-- State dropdown -->
+         <select id="state-dropdown">
+            <option>Select a state</option>
+         </select>
+         <button id="state-submit">Submit</button>
+         <!-- City dropdown -->
+         <select id="city-dropdown">
+           <option>Select a city</option>
+         </select>
+        <button id="city-submit">Check Air Quality</button>
         <div id="aqi-display"></div>
         </div>
         <script src="app.js"></script>
