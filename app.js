@@ -1,51 +1,143 @@
-const city = 'city-input'
+const apiKey = 'ee166a13-22ec-4584-9104-1f494495562d';
+const requestOptions = {
+  method: 'GET',
+  redirect: 'follow'
+};
 
-function getCityData(city, apiKey) {
-const encodedCity = encodeURIComponent(city);
-const options = { 
-  method: 'GET', 
-  headers: { 
-    accept: "application/json",
-    }
-  };
+// Retrieve the user inputted country element
+const countryInput = document.getElementById('country-input');
 
-  fetch(`https://api.openaq.org/v2/measurements?city=${encodedCity}&sort=desc&limit=1`, options) 
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-    if (data && data.results && data.results.length > 0) {
-      data.results.forEach(result => {
-        console.log(result);
-        if (result) {
-          var para = document.createElement('p');
-          para.textContent = `${result.parameter}: ${result.value} ${result.unit}`;
-          displayDiv.appendChild(para);
-        }
-      });
-    }
-  })
-  .catch(err => console.error(err));
+// Retrieve the user selected state from dropdown
+const stateDropdown = document.getElementById('state-dropdown');
+
+// Retrieve the user selected city from dropdown
+const cityDropdown = document.getElementById('city-dropdown');
+
+// Function to fetch all states for a country
+function fetchStatesByCountry(encodedCountry) {
+  const url = `https://api.airvisual.com/v2/states?country=${encodedCountry}&key=${apiKey}`;
+
+  return fetch(url, requestOptions)
+    .then(response => response.json())
+    .then(data => data.data)
+    .catch(error => {
+      console.error(error);
+      throw error;
+    });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  var city = sessionStorage.getItem('city');
-  var displayDiv = document.getElementById('city-data');
+// Function to fetch all cities within a state
+function fetchCitiesByState(encodedState) {
+  const url = `https://api.airvisual.com/v2/cities?state=${encodedState}&key=${apiKey}`;
 
-  if (displayDiv) { // Checking if the displayDiv does not return null before attempting to use the below statements
-    var cityHeader = document.createElement('h2');
-    cityHeader.textContent = city;
-    displayDiv.appendChild(cityHeader);
-
-    getCityData(city, displayDiv);
-  }
-
-  var button = document.querySelector('button');
-
-  if (button) { // Checking if the button does not return null before adding the event listener to it
-    document.querySelector('button').addEventListener('click', function() {
-      var city = document.getElementById('city-input').value;
-      sessionStorage.setItem('city', city);
-      window.location.href = 'aqiScore.html';
+  return fetch(url, requestOptions)
+    .then(response => response.json())
+    .then(data => data.data)
+    .catch(error => {
+      console.error(error);
+      throw error;
     });
-  }
-});
+}
+
+// Function to fetch cities for a country and state
+function fetchCitiesByCountryAndState(encodedCity, encodedState, encodedCountry) {
+  const url = `https://api.airvisual.com/v2/cities?city=${encodedCity}&state=${encodedState}&country=${encodedCountry}&key=${apiKey}`;
+
+  return fetch(url, requestOptions)
+    .then(response => response.json())
+    .then(data => data.data)
+    .catch(error => {
+      console.error(error);
+      throw error;
+    });
+}
+
+// Function to fetch city data using city, country and state
+function fetchCityDataByCityCountryAndState(encodedCity, encodedState, encodedCountry) {
+  const url = `https://api.airvisual.com/v2/city?city=${encodedCity}&state=${encodedState}&country=${encodedCountry}&key=${apiKey}`;
+
+  return fetch(url, requestOptions)
+    .then(response => response.json())
+    .then(data => data.data)
+    .catch(error => {
+      console.error(error);
+      throw error;
+    });
+}
+
+// Check if country-submit element exists in the page, as I have multiple html pages
+if (document.getElementById('country-submit')) {
+  // Event listener for country submitted
+  document.getElementById('country-submit').addEventListener('click', function() {
+    const selectedCountry = encodeURIComponent(countryInput.value);
+
+    // Fetch states for the inputted country
+    fetchStatesByCountry(selectedCountry)
+      .then(states => {
+        stateDropdown.innerHTML = '';
+
+        // Populate the state dropdown with options from the API
+        states.forEach(state => {
+          const option = document.createElement('option');
+          option.value = state.state;
+          option.textContent = state.state;
+          stateDropdown.appendChild(option);
+        });
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  });
+}
+
+// Check if state-submit element exists in the page, as I have multiple html pages
+if (document.getElementById('state-submit')) {
+  // Event listener for state input submission
+  document.getElementById('state-submit').addEventListener('click', function() {
+    const selectedCountry = encodeURIComponent(countryInput.value);
+    const selectedState = encodeURIComponent(stateDropdown.value);
+    const selectedCity = encodeURIComponent(cityDropdown.value);
+
+    // Fetch cities for the selected country and state
+    fetchCitiesByCountryAndState(selectedCity, selectedState, selectedCountry)
+      .then(cities => {
+        cityDropdown.innerHTML = '';
+
+        // Populate the city dropdown with all cities in that state
+        cities.forEach(city => {
+          const option = document.createElement('option');
+          option.value = city.city;
+          option.textContent = city.city;
+          cityDropdown.appendChild(option);
+        });
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  });
+}
+
+// Check if city-submit element exists in the page, as I have multiple html pages
+if (document.getElementById('city-submit')) {
+  // Event listener for city dropdown submitted by user
+  document.getElementById('city-submit').addEventListener('click', function() {
+    const selectedCity = encodeURIComponent(cityDropdown.value);
+    const selectedState = encodeURIComponent(stateDropdown.value);
+    const selectedCountry = encodeURIComponent(countryInput.value);
+
+    // Fetch data for the selected city, using city, country, and state
+    fetchCityDataByCityCountryAndState(selectedCity, selectedState, selectedCountry)
+      .then(cityData => {
+        console.log(cityData);
+        // Store the selected city and AQI score in localStorage for displaying on aqiScore.html
+        localStorage.setItem('selectedCity', selectedCity);
+        localStorage.setItem('aqi', cityData.current.pollution.aqius);
+
+        // Navigating to the aqiScore.html page
+        window.location.href = `aqiScore.html?selectedCity=${selectedCity}&aqi=${cityData.current.pollution.aqius}`;
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  });
+}
