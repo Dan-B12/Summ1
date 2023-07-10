@@ -12,10 +12,13 @@
 
 <a name="about"></a>
 ## About
-This web app will allow users to track the Air Quality Index (AQI) for every city. By typing in the name of the city and pressing "Check Air Quality" button it will display the air quality value for the selected city. 
-OpenAQ's API service was used to collect the data used for this Web App, as they offer an open, real time database of air quality data that is aggregated from public data sources such as government and research institutes. 
+This web app will allow users to track the Air Quality Index (AQI) for every city. By typing in the name of the country and pressing "Submit" button, the user can select the state from the dropdown, then by pressing submit again, the user will be provided by all the cities within that state. Once each of these values have been populated, the user can press the “Check Air Quality” button to display the air quality value for the selected city. IQAir’s API service was used to collect the data used for this Web App, as they offer an open, real-time database of air quality data that is aggregated from data sources such as government, environmental agencies and individual stations. 
 
-This app was designed using continuous deployment and development strategies to aid with productivity and product quality. 
+The design of my application was developed using software design principles, and incorporates state-of-the-art developments to ensure effectiveness, maintainability, and scalability. I adopted a modular approach to ensure maintenance was easy to implement and improve code reusability for repeated functions. I leveraged user-centered design principles to maintain the intuitive and user-friendly interface of the web app and used principles of integration and interoperability to enable seamless communication with the API I used for this solution. 
+
+In an effort to enhance code readability during the development of my application, I implemented the practice of naming my classes with unique identifiers. This promoted clean and organized code within my project and enabled me to easily reference my CSS and JavaScript files for styling and implementing functions. Implementing practices like these follows a key principle in software development, ensuring that my code is easily understandable and manageable for both myself the developer, and any others who may contribute towards the project in future. 
+
+This app was designed using continuous deployment and development strategies to aid with productivity and product quality:
 
 Continuous Integration (CI): The practice of merging code changes into a single central repository once the code has been tested for errors. This allows developers to detect issues early to aid in debugging.
 
@@ -23,7 +26,7 @@ Continuous Deployment (CD): The practice of automatically deploying code to prod
 
 <a name="Deployed App"></a>
 ## Deployed App
-You can find my app deployed here under on my Github Page
+You can find my app deployed here on my Github Pages
 
 <a href="https://dan-b12.github.io/Summ1/" target="_blank">AQI App</a>
 
