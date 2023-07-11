@@ -53,6 +53,7 @@ To manage the requirements of my project effectively, I used the project trackin
 GitHub projects provides an easy-to-use interface to implement Agile methodologies into my project, where the tracking and assigning tasks will be used until completion. 
 
 To begin, I created a Kanban board with the intial requirements for the project, to visualize tasks that were in progress, and manage the flow of each task to completion. 
+
 ![image](https://github.com/Dan-B12/Summ1/assets/137525458/2d72f83f-146e-43fe-8999-911125e4ca0d)
 
 
