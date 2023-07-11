@@ -59,7 +59,8 @@ To begin, I created a Kanban board with the intial requirements for the project,
 
 <a name="testing"></a>
 ## Testing
-This project uses Jest for testing. To run the tests, use the following command:
+![image](https://github.com/Dan-B12/Summ1/assets/137525458/9c699260-2282-4cca-acab-037c049adb72)
+
 
 <a name="contributing"></a>
 ## Contributing
