@@ -45,8 +45,6 @@ You can find my app deployed here on my Github Pages
 
 <a name="Project Management"></a>
 ## Project Management
-
-
 In the project management phase of my project, I employed thorough planning and organization techniques to develop a structure for the workflow and timeline. I did this by breaking down sections of my project into smaller objectives, enabling me to set deadlines for each task and manage my time effectively. 
 
 I also implemented agile methodologies, including iterative development and frequent testing of code and functions, to enable adaptability and responsiveness of changes to my code. Using these agile methodologies allowed me to quickly identify any issues within the code to then develop resolutions to the problems. 
@@ -55,11 +53,27 @@ To manage the requirements of my project effectively, I used the project trackin
 
 To begin, I created a Kanban board with the initial requirements for the project, to visualize tasks that were in progress, and manage the flow of each task to completion. Among these tests were unit tests, integration tests and functional testing, where I mock-tested the performance of the API calls and returned values via my functions. 
 
+To begin, I created a Kanban board with the intial requirements for the project, to visualize tasks that were in progress, and manage the flow of each task to completion. 
+
+![image](https://github.com/Dan-B12/Summ1/assets/137525458/2d72f83f-146e-43fe-8999-911125e4ca0d)
+
 <a name="testing"></a>
 ## Testing
-This project uses Jest for testing. To run the tests, use the following command:
+This project uses Jest for testing. To run the tests, use the following command in PowerShell on the app.test.js file: 
 
+Npm test
 
+The use of verification and validation of code are vital steps in the software development process and were an important factor in the success of my web app. The use of verification in software engineering refers to the evaluation of artefacts (such as code, design and requirements) to ensure that they meet the design and implementations set at the beginning of the project. Validation is the practice of evaluating the software being developed against the user’s needs and the intended use of the project. 
+
+Using these verification and validation techniques above, I was able to ensure that the quality and functionality of my developed application met the intended purpose and allowed me to resolve bugs and inconsistencies in my code. 
+
+For this project I used the Jest testing framework, this fit my project perfectly as its designed to test both front-end and back-end web applications and provides a multitude of tools that assisted in writing the tests for my code. 
+
+Another method of testing I used for this web application was Lighthouse, an open-source tool developed by Google. Lighthouse allows developers to audit their web applications to improve the quality and performance, and scores based on factors such as page load time, rendering performance and responsive design. Using Lighthouse, I was able to assess my application when displayed as a web page and make improvements based on the feedback I received. 
+
+Evaluating my project throughout the design of the application using Jest and Lighthouse allowed me to verify the performance and accessibility of my design from the onset. Enabling me to identify and resolve issues promptly during the creation of the codebase. 
+
+As a result of this, following this test-driven method of development, I was able to develop a robust and reliable application that met the requirements specified in the planning stage of this project, and provide a positive user experience for anyone accessing my site. 
 
 <a name="contributing"></a>
 ## Contributing
