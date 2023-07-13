@@ -60,7 +60,6 @@ To begin, I created a Kanban board with the intial requirements for the project,
 <a name="testing"></a>
 ## Testing
 This project uses Jest for testing. To run the tests, use the following command in PowerShell on the app.test.js file: 
-
 Npm test
 
 The use of verification and validation of code are vital steps in the software development process and were an important factor in the success of my web app. The use of verification in software engineering refers to the evaluation of artefacts (such as code, design and requirements) to ensure that they meet the design and implementations set at the beginning of the project. Validation is the practice of evaluating the software being developed against the user’s needs and the intended use of the project. 
