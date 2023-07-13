@@ -45,19 +45,21 @@ You can find my app deployed here on my Github Pages
 
 <a name="Project Management"></a>
 ## Project Management
+
+
 In the project management phase of my project, I employed thorough planning and organization techniques to develop a structure for the workflow and timeline. I did this by breaking down sections of my project into smaller objectives, enabling me to set deadlines for each task and manage my time effectively. 
 
 I also implemented agile methodologies, including iterative development and frequent testing of code and functions, to enable adaptability and responsiveness of changes to my code. Using these agile methodologies allowed me to quickly identify any issues within the code to then develop resolutions to the problems. 
 
-To manage the requirements of my project effectively, I used the project tracking functionality in GitHub Project. This allowed me to create issues in line with the requirements for the project, and set timescales for each of these issues. 
-GitHub projects provides an easy-to-use interface to implement Agile methodologies into my project, where the tracking and assigning tasks will be used until completion. 
+To manage the requirements of my project effectively, I used the project tracking functionality in GitHub Project. This allowed me to create issues in line with the requirements for the project and set timescales for each of these issues. GitHub projects provide an easy-to-use interface to implement Agile methodologies into my project, where the tracking and assigning tasks will be used until completion.
 
-To begin, I created a Kanban board with the intial requirements for the project, to visualize tasks that were in progress, and manage the flow of each task to completion. 
-
+To begin, I created a Kanban board with the initial requirements for the project, to visualize tasks that were in progress, and manage the flow of each task to completion. Among these tests were unit tests, integration tests and functional testing, where I mock-tested the performance of the API calls and returned values via my functions. 
 
 <a name="testing"></a>
 ## Testing
 This project uses Jest for testing. To run the tests, use the following command:
+
+
 
 <a name="contributing"></a>
 ## Contributing
