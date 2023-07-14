@@ -28,15 +28,15 @@ This app was designed using continuous deployment and development strategies to 
 
 <a name="Deployed App"></a>
 ## Deployed App
-You can find my app deployed here on my Github Pages
+You can find my app deployed here on my GitHub Pages
 
 <a href="https://dan-b12.github.io/Summ1/" target="_blank">AQI App</a>
 
 <a name="features"></a>
 ## Features
-* Search or a country, state and city to get a city-specific AQI score.
+* Search for a country, state and city to get a city-specific AQI score.
 * Instantly access AQI data for cities
-* Easy to use interface
+* Easy-to-use interface
 
 <a name="technologies-used"></a>
 ## Technologies Used
