@@ -14,7 +14,7 @@ const stateDropdown = document.getElementById('state-dropdown');
 const cityDropdown = document.getElementById('city-dropdown');
 
 // Checking if we're on the first page
-if (window.location.pathname === '/index.html') {
+if (window.location.pathname === 'https://dan-b12.github.io/Summ1/') {
 // Hiding the state and city dropdowns to begin with
 const countryButton = document.getElementById('country-submit')
 const stateButton = document.getElementById('state-submit')
