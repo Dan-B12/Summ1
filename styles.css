@@ -24,7 +24,6 @@
     background: white;
     border-radius: 10px;
     box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.1);
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,4 +115,9 @@
 
   .aqi-hazardous {
     color: purple !important;
+  }
+
+  .aqi-tag {
+    display: block;
+    margin-top: 5px;
   }
