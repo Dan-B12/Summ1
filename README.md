@@ -52,7 +52,7 @@ My design was based on providing a simple, easy-to-use web application for users
 
 The web application was originally designed to be used on desktop browsers, as shown in the design plans on the Figma project,  but through the process of building the application, I decided to optimize the display for mobile devices too. This will allow users to access my web application with ease across all their devices and opens up a larger user base from the mobile traffic. 
 
-![image](https://github.com/Dan-B12/Summ1/assets/137525458/e17f41e9-9d3a-4b82-ae71-b1bacb731736)
+![image](https://github.com/Dan-B12/Summ1/assets/137525458/0b5c63af-c4aa-414a-9263-c01d6cf2773e)
 
 As seen in the figure above, some changes had to be made to the UI during development to enable the functionality of the web application. Additional input boxes had to be made to the landing page so that cities could be queried for their air quality, and the gauge chart shown on the score page was difficult to meet in the timescale of this project. This is something I will look to implement in future as I believe it’s an important UX feature to improve the look and usability of the application.  
 
@@ -69,7 +69,11 @@ To manage the requirements of my project effectively, I used the project trackin
 
 To begin, I created a Kanban board with the initial requirements for the project, to visualize tasks that were in progress, and manage the flow of each task to completion. Among these tests were unit tests, integration tests and functional testing, where I mock-tested the performance of the API calls and returned values via my functions. 
 
-![image](https://github.com/Dan-B12/Summ1/assets/137525458/2d72f83f-146e-43fe-8999-911125e4ca0d)
+![image](https://github.com/Dan-B12/Summ1/assets/137525458/bf31bd00-0036-41fb-bffd-b26995ce004f)
+
+I then added the initial issues created for the project into a Project timeline, where I set deadlines to complete initial tasks for each issue, e.g. creating the initial HTML/CSS structure and website UX design in Figma.
+
+![image](https://github.com/Dan-B12/Summ1/assets/137525458/ba78fb98-6bd7-4c4f-baae-0f1cbea128c4)
 
 <a name="testing"></a>
 ## Testing
@@ -83,7 +87,7 @@ Using these verification and validation techniques above, I was able to ensure t
 
 For this project I used the Jest testing framework, this fit my project perfectly as its designed to test both front-end and back-end web applications and provides a multitude of tools that assisted in writing the tests for my code. 
 
-![image](https://github.com/Dan-B12/Summ1/assets/137525458/143ead3e-8214-42e5-8d2f-61d3f798d7e6)
+![image](https://github.com/Dan-B12/Summ1/assets/137525458/cedf5346-f55d-49c9-ba78-a657b7d06c3a)
 
 Another method of testing I used for this web application was Lighthouse, an open-source tool developed by Google. Lighthouse allows developers to audit their web applications to improve the quality and performance, and scores based on factors such as page load time, rendering performance and responsive design. Using Lighthouse, I was able to assess my application when displayed as a web page and make improvements based on the feedback I received. 
 
