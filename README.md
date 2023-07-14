@@ -89,7 +89,7 @@ Another method of testing I used for this web application was Lighthouse, an ope
 
 For the user input page, I could make some improvements to the Accessibility of the website, but I am happy with the current score. The improvements suggested for this page included the contrast ratio of the input buttons to the page background. However, I preferred to stick to the original design of the website as I believe it looks clean and professional. 
 
-![image](https://github.com/Dan-B12/Summ1/assets/137525458/49a436c0-2b7c-4bc0-9011-d08ee697c9ad)
+![image](https://github.com/Dan-B12/Summ1/assets/137525458/23c0667e-cfa6-40e7-8e0b-258d80fe3959)
 
 And for the AQI score result page, Lighthouse analyzed this as a perfect score. Showing that the only issue according to the Lighthouse analysis is the contrast in colours, which can easily be fixed in future changes should it be needed. 
 
