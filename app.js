@@ -13,6 +13,18 @@ const stateDropdown = document.getElementById('state-dropdown');
 // Retrieve the user selected city from dropdown
 const cityDropdown = document.getElementById('city-dropdown');
 
+// Checking if we're on the first page
+if (window.location.pathname === '/index.html') {
+// Hiding the state and city dropdowns to begin with
+const countryButton = document.getElementById('country-submit')
+const stateButton = document.getElementById('state-submit')
+const cityButton = document.getElementById('city-submit')
+stateDropdown.style.display = 'none';
+cityDropdown.style.display = 'none';
+stateButton.style.display = 'none';
+cityButton.style.display = 'none';
+}
+
 // Function to fetch all states for a country
 function fetchStatesByCountry(encodedCountry) {
   const url = `https://api.airvisual.com/v2/states?country=${encodedCountry}&key=${apiKey}`;
@@ -83,6 +95,9 @@ if (document.getElementById('country-submit')) {
           option.textContent = state.state;
           stateDropdown.appendChild(option);
         });
+        stateDropdown.style.display = 'block';
+        document.getElementById('state-submit').style.display = 'block';
+        document.getElementById('country-submit').style.display = 'none';
       })
       .catch(error => {
         console.error(error);
@@ -110,6 +125,9 @@ if (document.getElementById('state-submit')) {
           option.textContent = city.city;
           cityDropdown.appendChild(option);
         });
+        cityDropdown.style.display = 'block';
+        document.getElementById('city-submit').style.display = 'block';
+        document.getElementById('state-submit').style.display = 'none';
       })
       .catch(error => {
         console.error(error);
@@ -128,16 +146,15 @@ if (document.getElementById('city-submit')) {
     // Fetch data for the selected city, using city, country, and state
     fetchCityDataByCityCountryAndState(selectedCity, selectedState, selectedCountry)
       .then(cityData => {
-        console.log(cityData);
         // Store the selected city and AQI score in localStorage for displaying on aqiScore.html
         localStorage.setItem('selectedCity', selectedCity);
         localStorage.setItem('aqi', cityData.current.pollution.aqius);
-
         // Navigating to the aqiScore.html page
         window.location.href = `aqiScore.html?selectedCity=${selectedCity}&aqi=${cityData.current.pollution.aqius}`;
       })
       .catch(error => {
         console.error(error);
       });
+
   });
 }
