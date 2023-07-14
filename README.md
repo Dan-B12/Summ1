@@ -69,7 +69,7 @@ To manage the requirements of my project effectively, I used the project trackin
 
 To begin, I created a Kanban board with the initial requirements for the project, to visualize tasks that were in progress, and manage the flow of each task to completion. Among these tests were unit tests, integration tests and functional testing, where I mock-tested the performance of the API calls and returned values via my functions. 
 
-![image](https://github.com/Dan-B12/Summ1/assets/137525458/bf31bd00-0036-41fb-bffd-b26995ce004f)
+![image](https://github.com/Dan-B12/Summ1/assets/137525458/f7228a8f-f890-4e48-a549-6bfc88a27d3d)
 
 I then added the initial issues created for the project into a Project timeline, where I set deadlines to complete initial tasks for each issue, e.g. creating the initial HTML/CSS structure and website UX design in Figma.
 
