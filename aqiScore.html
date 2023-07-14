@@ -12,12 +12,13 @@
     <body>
         <div class="container">
             <div>
-              <h2>Selected City</h2>
+              <h2>City</h2>
               <p id="city-selection"></p>
             </div>
             <div>
               <h2>AQI Score</h2>
               <p id="aqi-data"></p>
+              <span id="aqi-tag" class="aqi-tag"></span>
             </div>
           </div>
 
@@ -30,20 +31,28 @@
               // Update the selected city and AQI score elements
               const citySelection = document.getElementById('city-selection');
               const aqiData = document.getElementById('aqi-data');
+              const aqiTag = document.getElementById('aqi-tag');
               citySelection.textContent = selectedCity;
               aqiData.textContent = aqi;
 
               if (aqi <= 50) {
+                aqiTag.innerText = 'Good';
                 aqiData.classList.add('aqi-good');
             } else if (aqi <= 100) {
+                aqiTag.innerText = 'Moderate';
                 aqiData.classList.add('aqi-moderate');
             } else if (aqi <= 150) {
+                aqiTag.innerText = 'Unhealthy';
                 aqiData.classList.add('aqi-unhealthy');
             } else if (aqi <= 200) {
+                aqiTag.innerText = 'Very Unhealthy';
                 aqiData.classList.add('aqi-very-unhealthy');
             } else {
+                aqiTag.innerText = 'Hazardous';
                 aqiData.classList.add('aqi-hazardous');
             }
+
+            aqiData.appendChild(aqiTag);
             });
           </script>
         <script src="app.js"></script>
