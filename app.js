@@ -13,8 +13,9 @@ const stateDropdown = document.getElementById('state-dropdown');
 // Retrieve the user selected city from dropdown
 const cityDropdown = document.getElementById('city-dropdown');
 
-// Checking if we're on the first page
-if (window.location.pathname === 'https://dan-b12.github.io/Summ1/') {
+// Checking if we're on the first page using the query parameter for the second page URL is present
+const urlParams = new URLSearchParams(window.location.search);
+if (!urlParams.has('selectedCity') || !urlParams.has('aqi')) {
 // Hiding the state and city dropdowns to begin with
 const countryButton = document.getElementById('country-submit')
 const stateButton = document.getElementById('state-submit')
