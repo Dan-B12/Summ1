@@ -87,7 +87,7 @@ Using these verification and validation techniques above, I was able to ensure t
 
 For this project I used the Jest testing framework, this fit my project perfectly as its designed to test both front-end and back-end web applications and provides a multitude of tools that assisted in writing the tests for my code. 
 
-![image](https://github.com/Dan-B12/Summ1/assets/137525458/cedf5346-f55d-49c9-ba78-a657b7d06c3a)
+![image](https://github.com/Dan-B12/Summ1/assets/137525458/00151371-4948-4a24-9bf5-2bddd0ac8fff)
 
 Another method of testing I used for this web application was Lighthouse, an open-source tool developed by Google. Lighthouse allows developers to audit their web applications to improve the quality and performance, and scores based on factors such as page load time, rendering performance and responsive design. Using Lighthouse, I was able to assess my application when displayed as a web page and make improvements based on the feedback I received. 
 
