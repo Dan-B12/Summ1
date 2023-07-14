@@ -3,12 +3,13 @@
 ## Table of Contents
 1. [About](#about)
 2. [Deployed App](#deployed-app)
-2. [Features](#features)
-3. [Technologies Used](#technologies-used)
-5. [Project Management](#project-management)
-6. [Testing](#testing)
-7. [Contributing](#contributing)
-8. [Evaluation](#evaluation)
+3. [Features](#features)
+4. [Technologies Used](#technologies-used)
+5. [UX Design](#ux-design)
+6. [Project Management](#project-management)
+7. [Testing](#testing)
+8. [Contributing](#contributing)
+9. [Evaluation](#evaluation)
 
 <a name="about"></a>
 ## About
@@ -43,6 +44,15 @@ You can find my app deployed here on my Github Pages
 * CSS
 * Jest for testing
 
+<a name="ux-design"></a>
+During the planning phase of my web application, I developed an initial UX design to create a high-quality user experience. The design was created using Figma, a web-based design tool used to design many interfaces such as websites, applications and logos. 
+
+My design was based on providing a simple, easy-to-use web application for users to search for and display air quality data in a chosen city. This meant applying fundamental design principles to my application throughout the development of the project. Design principles used during development included consistency and simplicity and allowed me to create a visually appealing interface with a simple function to query the API data. 
+
+The web application was initially designed to be used on desktop browsers, as shown in the design plans on the Figma project,  but through the process of building the application, I decided to optimize the display for mobile devices too. This will allow users to access my web application with ease across all their devices and opens up a larger user base from the mobile traffic. 
+
+<a href=https://www.figma.com/file/raxxlRou3CiFom3SYrnPxL/Desktop-Design?type=design&t=vHYSNATJy6q6jvth-6 target=”_blank”> Figma Project</a>
+
 <a name="Project Management"></a>
 ## Project Management
 In the project management phase of my project, I employed thorough planning and organization techniques to develop a structure for the workflow and timeline. I did this by breaking down sections of my project into smaller objectives, enabling me to set deadlines for each task and manage my time effectively. 
@@ -72,16 +82,16 @@ Another method of testing I used for this web application was Lighthouse, an ope
 
 Evaluating my project throughout the design of the application using Jest and Lighthouse allowed me to verify the performance and accessibility of my design from the onset. Enabling me to identify and resolve issues promptly during the creation of the codebase. 
 
-As a result of this, following this test-driven method of development, I was able to develop a robust and reliable application that met the requirements specified in the planning stage of this project, and provide a positive user experience for anyone accessing my site. 
+As a result of this, following this test-driven method of development, I was able to develop a robust and reliable application that met the requirements specified in the planning stage of this project and provide a positive user experience for anyone accessing my site. 
 
 <a name="contributing"></a>
 ## Contributing
 If you'd like to contribute to my project, please follow these steps:
 
 1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/YourFeatureName`
-3. Commit your changes: `git commit -m 'Add features'`
-4. Push to the branch: `git push origin feature/YourFeatureName`
+2. Create your feature branch: `git checkout -b origin/main`
+3. Commit your changes: `git commit -m 'fileName'`
+4. Push to the branch: `git push origin main`
 5. Open a pull request
 
 <a name="evaluation"></a>
@@ -89,7 +99,7 @@ If you'd like to contribute to my project, please follow these steps:
 
 Overall, I am extremely happy with the final result of my application, it fits the intended purpose of allowing users to search for the Air Quality Score for their selected city and provides a user-friendly front-end to search from. 
 
-The web app allows users to search for a country, select the state in which the city is located, then select the city to retrieve the AQI score for this city. The returned results allow for easy interpretation of the Air Quality in a city, and are colour coded to represent the quality of the air, in line with other online sources. I designed the web pages for the app with user experience in mind, making elements on the page bold and clear with appealing and contrasting colour schemes that are easy to comprehend. 
+The web app allows users to search for a country, select the state in which the city is located, and then select the city to retrieve the AQI score for this city. The returned results allow for easy interpretation of the Air Quality in a city and are colour coded to represent the quality of the air, in line with other online sources. I designed the web pages for the app with user experience in mind, making elements on the page bold and clear with appealing and contrasting colour schemes that are easy to comprehend. 
 
 I also considered many design principles during the development, ensuring the creation of a user-friendly and efficient web application. 
 
@@ -102,5 +112,3 @@ Finally, I implemented responsive design principles in my HTML and CSS to make t
 In evaluating my approach, it's clear that the principles used made great contributions towards developing a robust and effective application. The use of modularity helped me to keep the codebase organized and manageable and understand my code to add further features. 
 
 Although there were many strengths to my design, some improvements could be made to build on the user experience and functionality of the project. For example, I could implement some changes to aid site optimization and user experience if I were to share the website publicly. I could also make some changes to the complexity of my JavaScript code to ensure contributors can easily understand how the app functions. 
-
-An feature improvement I would aim to implement in future would be a gauge chart to the results page, that moves depending on the AQI score for the city, this was in the initial plans for the project. Unfortunately, this was too complex a feature to implement within the timescale of the project. 
