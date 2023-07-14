@@ -57,7 +57,7 @@ The web application was originally designed to be used on desktop browsers, as s
 As seen in the figure above, some changes had to be made to the UI during development to enable the functionality of the web application. Additional input boxes had to be made to the landing page so that cities could be queried for their air quality, and the gauge chart shown on the score page was difficult to meet in the timescale of this project. This is something I will look to implement in future as I believe it’s an important UX feature to improve the look and usability of the application.  
 
 Access the link to my Figma project below:
-<a href=https://www.figma.com/file/raxxlRou3CiFom3SYrnPxL/Desktop-Design?type=design&t=vHYSNATJy6q6jvth-6 target=”_blank”> Figma Project</a>
+<a href="https://www.figma.com/file/raxxlRou3CiFom3SYrnPxL/Desktop-Design?type=design&t=vHYSNATJy6q6jvth-6" target=”_blank”> Figma Project</a>
 
 <a name="Project Management"></a>
 ## Project Management
